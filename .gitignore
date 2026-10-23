@@ -57,8 +57,8 @@ output/*/index.html
 # Sphinx
 docs/_build
 docs/modules.rst
-docs/skilredi_keyterms_app.rst
-docs/skilredi_keyterms_app.*.rst
+docs/openedx_keyterms_ext.rst
+docs/openedx_keyterms_ext.*.rst
 
 # Private requirements
 requirements/private.in

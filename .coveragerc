@@ -1,7 +1,7 @@
 [run]
 branch = True
 data_file = .coverage
-source=skilredi_keyterms_app
+source=openedx_keyterms_ext
 omit =
     test_settings.py
     */migrations/*

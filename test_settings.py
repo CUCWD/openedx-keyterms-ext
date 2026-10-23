@@ -32,14 +32,14 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.messages',
     'django.contrib.sessions',
-    'skilredi_keyterms_app',
+    'openedx_keyterms_ext',
 )
 
 LOCALE_PATHS = [
-    root('skilredi_keyterms_app', 'conf', 'locale'),
+    root('openedx_keyterms_ext', 'conf', 'locale'),
 ]
 
-ROOT_URLCONF = 'skilredi_keyterms_app.urls'
+ROOT_URLCONF = 'openedx_keyterms_ext.urls'
 
 SECRET_KEY = 'insecure-secret-key'
 

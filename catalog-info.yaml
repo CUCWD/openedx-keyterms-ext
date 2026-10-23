@@ -4,7 +4,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: ""
 metadata:
-  name: 'skilredi-keyterms-app'
+  name: 'openedx-keyterms-ext'
   description: "keyterms django app"
   annotations:
     # The openedx.org/release key is described in OEP-10:

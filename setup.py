@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Package metadata for skilredi_keyterms_app.
+Package metadata for openedx_keyterms_ext.
 """
 import os
 import re
@@ -117,7 +117,7 @@ def is_requirement(line):
     return line and line.strip() and not line.startswith(("-r", "#", "-e", "git+", "-c"))
 
 
-VERSION = get_version('skilredi_keyterms_app', '__init__.py')
+VERSION = get_version('openedx_keyterms_ext', '__init__.py')
 
 if sys.argv[-1] == 'tag':
     print("Tagging the version on github:")
@@ -129,20 +129,20 @@ README = open(os.path.join(os.path.dirname(__file__), 'README.rst'), encoding="u
 CHANGELOG = open(os.path.join(os.path.dirname(__file__), 'CHANGELOG.rst'), encoding="utf8").read()
 
 setup(
-    name='skilredi-keyterms-app',
+    name='openedx-keyterms-ext',
     version=VERSION,
     description="""keyterms django app""",
     long_description=README + '\n\n' + CHANGELOG,
     author='Rebecca Callis',
     author_email='rldavid@clemson.edu',
-    url='https://github.com/cucwd/skilredi-keyterms-app',
+    url='https://github.com/cucwd/openedx-keyterms-ext',
     packages=find_packages(
-        include=['skilredi_keyterms_app', 'skilredi_keyterms_app.*'],
+        include=['openedx_keyterms_ext', 'openedx_keyterms_ext.*'],
         exclude=["*tests"],
     ),
     entry_points={
         "lms.djangoapp": [
-            "skilredi_keyterms_app = skilredi_keyterms_app.apps:KeytermsDjangoAppConfig"
+            "openedx_keyterms_ext = openedx_keyterms_ext.apps:KeytermsDjangoAppConfig"
         ],
     },
     include_package_data=True,

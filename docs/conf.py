@@ -1,6 +1,6 @@
 # pylint: disable=invalid-name
 """
-skilredi-keyterms-app documentation build configuration file.
+openedx-keyterms-ext documentation build configuration file.
 
 This file is execfile()d with the current directory set to its
 containing dir.
@@ -39,7 +39,7 @@ def get_version(*file_paths):
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(REPO_ROOT)
 
-VERSION = get_version('../skilredi_keyterms_app', '__init__.py')
+VERSION = get_version('../openedx_keyterms_ext', '__init__.py')
 # Configure Django for autodoc usage
 os.environ['DJANGO_SETTINGS_MODULE'] = 'test_settings'
 django_setup()
@@ -91,17 +91,17 @@ source_suffix = '.rst'
 top_level_doc = 'index'
 
 # General information about the project.
-project = 'skilredi-keyterms-app'
+project = 'openedx-keyterms-ext'
 copyright = f'{datetime.now().year}, Axim Collaborative, Inc.'  # pylint: disable=redefined-builtin
 author = 'Axim Collaborative, Inc.'
-project_title = 'skilredi-keyterms-app'
+project_title = 'openedx-keyterms-ext'
 documentation_title = f"{project_title}"
 
 # Set display_github to False if you don't want "edit on Github" button
 html_context = {
     "display_github": True,  # Integrate GitHub
     "github_user": "edx",  # Username
-    "github_repo": 'skilredi-keyterms-app',  # Repo name
+    "github_repo": 'openedx-keyterms-ext',  # Repo name
     "github_version": "main",  # Version
     "conf_py_path": "/docs/",  # Path in the checkout to the docs root
 }
@@ -186,7 +186,7 @@ html_theme = 'sphinx_book_theme'
 # documentation.
 #
 html_theme_options = {
-    "repository_url": "https://github.com/cucwd/skilredi-keyterms-app",
+    "repository_url": "https://github.com/cucwd/openedx-keyterms-ext",
     "repository_branch": 'main',
     "path_to_docs": "docs/",
     "home_page_in_toc": True,
@@ -223,7 +223,7 @@ html_theme_options = {
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
 #
-# html_title = 'skilredi-keyterms-app v0.1.0'
+# html_title = 'openedx-keyterms-ext v0.1.0'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #
@@ -537,8 +537,8 @@ def on_init(app):  # pylint: disable=unused-argument
         # If we are, assemble the path manually
         bin_path = os.path.abspath(os.path.join(sys.prefix, 'bin'))
         apidoc_path = os.path.join(bin_path, apidoc_path)
-    check_call([apidoc_path, '-o', docs_path, os.path.join(root_path, 'skilredi_keyterms_app'),
-                os.path.join(root_path, 'skilredi_keyterms_app/migrations')])
+    check_call([apidoc_path, '-o', docs_path, os.path.join(root_path, 'openedx_keyterms_ext'),
+                os.path.join(root_path, 'openedx_keyterms_ext/migrations')])
 
 
 def setup(app):

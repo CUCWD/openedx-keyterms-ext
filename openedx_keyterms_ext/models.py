@@ -1,5 +1,5 @@
 """
-Database models for skilredi_keyterms_app.
+Database models for openedx_keyterms_ext.
 """
 import json
 

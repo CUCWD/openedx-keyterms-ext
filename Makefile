@@ -87,13 +87,13 @@ selfcheck: ## check that the Makefile is well-formed
 
 extract_translations: ## extract strings to be translated, outputting .mo files
 	rm -rf docs/_build
-	cd skilredi_keyterms_app && i18n_tool extract --no-segment
+	cd openedx_keyterms_ext && i18n_tool extract --no-segment
 
 compile_translations: ## compile translation files, outputting .po files for each supported language
-	cd skilredi_keyterms_app && i18n_tool generate
+	cd openedx_keyterms_ext && i18n_tool generate
 
 detect_changed_source_translations:
-	cd skilredi_keyterms_app && i18n_tool changed
+	cd openedx_keyterms_ext && i18n_tool changed
 
 ifeq ($(OPENEDX_ATLAS_PULL),)
 pull_translations: ## Pull translations from Transifex
@@ -101,15 +101,15 @@ pull_translations: ## Pull translations from Transifex
 else
 # Experimental: OEP-58 Pulls translations using atlas
 pull_translations:
-	find skilredi_keyterms_app/conf/locale -mindepth 1 -maxdepth 1 -type d -exec rm -r {} \;
-	atlas pull $(OPENEDX_ATLAS_ARGS) translations/skilredi-keyterms-app/skilredi_keyterms_app/conf/locale:skilredi_keyterms_app/conf/locale
+	find openedx_keyterms_ext/conf/locale -mindepth 1 -maxdepth 1 -type d -exec rm -r {} \;
+	atlas pull $(OPENEDX_ATLAS_ARGS) translations/openedx-keyterms-ext/openedx_keyterms_ext/conf/locale:openedx_keyterms_ext/conf/locale
 	python manage.py compilemessages
 
 	@echo "Translations have been pulled via Atlas and compiled."
 endif
 
 dummy_translations: ## generate dummy translation (.po) files
-	cd skilredi_keyterms_app && i18n_tool dummy
+	cd openedx_keyterms_ext && i18n_tool dummy
 
 build_dummy_translations: extract_translations dummy_translations compile_translations ## generate and compile dummy translation files
 

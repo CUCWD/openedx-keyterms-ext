@@ -1,5 +1,5 @@
 """
-skilredi_keyterms_app Django application initialization.
+openedx_keyterms_ext Django application initialization.
 """
 
 from django.apps import AppConfig
@@ -8,10 +8,10 @@ from openedx.core.djangoapps.plugins.constants import ProjectType, SettingsType
 
 class KeytermsDjangoAppConfig(AppConfig):
     """
-    Configuration for the skilredi_keyterms_app Django application.
+    Configuration for the openedx_keyterms_ext Django application.
     """
 
-    name = 'skilredi_keyterms_app'
+    name = 'keyterms'
 
     # Class attribute that configures and enables this app as a Plugin App.
     plugin_app = {

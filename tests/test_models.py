@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Tests for the `skilredi-keyterms-app` models module.
+Tests for the `openedx-keyterms-ext` models module.
 """
 
 import pytest
