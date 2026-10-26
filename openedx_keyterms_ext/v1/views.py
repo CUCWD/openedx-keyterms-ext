@@ -7,8 +7,8 @@ from rest_framework.response import Response
 
 from django.http.response import JsonResponse
 
-from skilredi_keyterms_app.models import Term
-from skilredi_keyterms_app import serializers
+from openedx_keyterms_ext.models import Term
+from openedx_keyterms_ext import serializers
 
 
 class KeyTermView(GenericAPIView):

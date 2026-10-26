@@ -11,7 +11,7 @@ class KeytermsDjangoAppConfig(AppConfig):
     Configuration for the openedx_keyterms_ext Django application.
     """
 
-    name = 'keyterms'
+    name = 'openedx_keyterms_ext'
 
     # Class attribute that configures and enables this app as a Plugin App.
     plugin_app = {
